@@ -10,7 +10,7 @@ RUN npm config set network-timeout 600000 -g && npm install --only=production
 ENV PATH /opt/node_modules/.bin:$PATH
 WORKDIR /opt/app
 COPY . .
-COPY ./config/env/production ./config/env/
+COPY ./config/env/production/ ./config/env/
 RUN npm run build
 
 # Creating final production image
