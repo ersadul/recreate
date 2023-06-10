@@ -76,10 +76,11 @@
     "name": {
       "type": "json"
     },
-    "recommendations": {
+    "history": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::recommendation.recommendation"
+      "relation": "oneToOne",
+      "target": "api::history.history",
+      "inversedBy": "user"
     }
   }
 }
