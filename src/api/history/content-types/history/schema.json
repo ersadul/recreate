@@ -12,16 +12,21 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "recommendations": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::recommendation.recommendation"
-    },
     "user": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "plugin::users-permissions.user",
       "mappedBy": "history"
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article"
+    },
+    "videos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::video.video"
     }
   }
 }

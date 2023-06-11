@@ -1,10 +1,11 @@
 {
   "kind": "collectionType",
-  "collectionName": "recommendations",
+  "collectionName": "videos",
   "info": {
-    "singularName": "recommendation",
-    "pluralName": "recommendations",
-    "displayName": "Recommendation"
+    "singularName": "video",
+    "pluralName": "videos",
+    "displayName": "Video",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,25 +17,26 @@
       "required": true
     },
     "description": {
-      "type": "text"
+      "type": "string"
     },
-    "link": {
-      "type": "string",
-      "required": false
-    },
-    "image": {
+    "video": {
       "type": "media",
       "multiple": true,
       "required": false,
       "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
+        "videos"
       ]
     },
     "labels": {
-      "type": "json"
+      "type": "json",
+      "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

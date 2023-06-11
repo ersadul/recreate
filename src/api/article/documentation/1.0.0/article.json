@@ -1,5 +1,5 @@
 {
-  "/recommendations": {
+  "/articles": {
     "get": {
       "responses": {
         "200": {
@@ -7,7 +7,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RecommendationListResponse"
+                "$ref": "#/components/schemas/ArticleListResponse"
               }
             }
           }
@@ -64,7 +64,7 @@
         }
       },
       "tags": [
-        "Recommendation"
+        "Article"
       ],
       "parameters": [
         {
@@ -169,7 +169,7 @@
           }
         }
       ],
-      "operationId": "get/recommendations"
+      "operationId": "get/articles"
     },
     "post": {
       "responses": {
@@ -178,7 +178,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RecommendationResponse"
+                "$ref": "#/components/schemas/ArticleResponse"
               }
             }
           }
@@ -235,23 +235,23 @@
         }
       },
       "tags": [
-        "Recommendation"
+        "Article"
       ],
       "parameters": [],
-      "operationId": "post/recommendations",
+      "operationId": "post/articles",
       "requestBody": {
         "required": true,
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/RecommendationRequest"
+              "$ref": "#/components/schemas/ArticleRequest"
             }
           }
         }
       }
     }
   },
-  "/recommendations/{id}": {
+  "/articles/{id}": {
     "get": {
       "responses": {
         "200": {
@@ -259,7 +259,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RecommendationResponse"
+                "$ref": "#/components/schemas/ArticleResponse"
               }
             }
           }
@@ -316,7 +316,7 @@
         }
       },
       "tags": [
-        "Recommendation"
+        "Article"
       ],
       "parameters": [
         {
@@ -330,7 +330,7 @@
           }
         }
       ],
-      "operationId": "get/recommendations/{id}"
+      "operationId": "get/articles/{id}"
     },
     "put": {
       "responses": {
@@ -339,7 +339,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RecommendationResponse"
+                "$ref": "#/components/schemas/ArticleResponse"
               }
             }
           }
@@ -396,7 +396,7 @@
         }
       },
       "tags": [
-        "Recommendation"
+        "Article"
       ],
       "parameters": [
         {
@@ -410,13 +410,13 @@
           }
         }
       ],
-      "operationId": "put/recommendations/{id}",
+      "operationId": "put/articles/{id}",
       "requestBody": {
         "required": true,
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/RecommendationRequest"
+              "$ref": "#/components/schemas/ArticleRequest"
             }
           }
         }
@@ -487,7 +487,7 @@
         }
       },
       "tags": [
-        "Recommendation"
+        "Article"
       ],
       "parameters": [
         {
@@ -501,7 +501,7 @@
           }
         }
       ],
-      "operationId": "delete/recommendations/{id}"
+      "operationId": "delete/articles/{id}"
     }
   }
 }

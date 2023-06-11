@@ -1,12 +1,12 @@
 'use strict';
 
 /**
- * recommendation service
+ * video service
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::recommendation.recommendation', ({ strapi }) => ({
+module.exports = createCoreService('api::video.video', ({strapi}) => ({
     async isHistoryExist(...args) {
         for (let history of args[1]) {
             if (args[0] == history.user.id) {
@@ -15,7 +15,6 @@ module.exports = createCoreService('api::recommendation.recommendation', ({ stra
         }
         return false
     },
-
     async updateHistory(...args) {
         const userId = args[0]
 
@@ -30,10 +29,10 @@ module.exports = createCoreService('api::recommendation.recommendation', ({ stra
         const oldHistoryEntry = await strapi.query('api::history.history').findOne({
             select: ['id'],
             where: { id: historyId },
-            populate: { recommendations: true },
+            populate: { videos: true },
         });
 
-        const arr1 = oldHistoryEntry.recommendations
+        const arr1 = oldHistoryEntry.videos
         const arr2 = args[1]
 
         const haveSameHistory = arr1.length === arr2.length && arr1.every(element => arr2.includes(element));
@@ -45,9 +44,10 @@ module.exports = createCoreService('api::recommendation.recommendation', ({ stra
 
             await strapi.entityService.update('api::history.history', historyId, {
                 data: {
-                    recommendations: uniqueIds
+                    videos: uniqueIds
                 },
             });
         }
     },
+
 }));
