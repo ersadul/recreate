@@ -21,7 +21,7 @@ Before installing Strapi, the following requirements must be installed on your c
 - [Python](https://www.python.org/downloads/) (if using a SQLite database)
 
 #### Clone and install dev
-After cloning this repository you can just this magic command✨.
+After cloning this repository you can just type this magic command✨.
 ```
 npm install --save-dev
 ```
