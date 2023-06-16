@@ -6,7 +6,7 @@ Unlock Creativity through all possibilities!
 We are using Cloud Run to deploy our service and Cloud SQL also GCS to store our data.
 ![image](./architecture.png)
 ### Data Model
-This is the data model that suits our business case
+This is the data model that suits our business case.
 ![image](./erd.png)
 
 ## Getting started
@@ -21,7 +21,7 @@ Before installing Strapi, the following requirements must be installed on your c
 - [Python](https://www.python.org/downloads/) (if using a SQLite database)
 
 #### Clone and install dev
-After cloning this repository you can just this magic command✨
+After cloning this repository you can just this magic command✨.
 ```
 npm install --save-dev
 ```
